@@ -1,0 +1,160 @@
+@font-face {
+  font-family: dmsans;
+  src: url("dmsans.ttf");
+}
+
+@font-face {
+  font-family: winkle;
+  src: url("Winkle-Regular.ttf");
+}
+
+body {
+  background-color: #eef7ef;
+  font-family: "dmsans", sans-serif;
+}
+
+.players_text {
+  font-weight: 900;
+  margin-top: 50px;
+  font-size: 40px;
+  color: #19251b;
+  text-align: center;
+}
+
+.title_div {
+  margin: auto;
+}
+
+.players {
+  height: 130px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.player_div {
+  margin-top: px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  width: 280px;
+  height: 305px;
+  border-radius: 13px;
+  background-color: white;
+  padding-top: 25px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  
+}
+
+#pd1 {
+  background-color: #f8b2bc;
+}
+
+#pd2 {
+  background-color: #f6de9f;
+}
+
+#pd3 {
+  background-color: #fbb39a;
+}
+
+#pd4 {
+  background-color: #a3c4e4;
+}
+
+#pd5 {
+  background-color: #b2b4da;
+}
+
+#pd6 {
+  background-color: #ceb4d9;
+}
+
+#pd7 {
+  background-color: #9dc7b9;
+}
+
+#pd8 {
+  background-color: #acbfa1;
+}
+
+#pd9 {
+  background-color: #f59597;
+}
+
+#pd10 {
+  background-color: #b4e5ed;
+}
+
+.name_div {
+  width: 230px;
+  height: 70px;
+  margin: auto;
+}
+
+.name {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+  vertical-align: middle;
+  line-height: 70px;
+}
+
+.scan_div {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  height: 170px;
+  width: 230px;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.scan_text {
+  margin-top: -100px; 
+}
+
+.table {
+  margin: auto;
+}
+
+#card1 {
+  height: 170px;
+  width: 230px;
+}
+
+.edit_icon{
+  height: 18px;
+  margin-right: 5px;
+}
+
+.player_name_table {
+  width: 230px;
+  margin: 0;
+}
+
+.start_div{
+  margin: auto;
+  margin-top: -10px;
+  border-radius: 10px;
+  font-family: winkle, sans-serif;
+  color: white;
+  background-color: #a5c5a8;
+  font-size: 35px;
+  width: 230px;
+  text-align: center;
+  height: 60px;
+  vertical-align: middle;
+  line-height: 60px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.start_div:hover{
+  color: rgb(242, 242, 242);
+  background-color: #9ab79d;
+}

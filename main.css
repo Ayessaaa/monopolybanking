@@ -1,0 +1,59 @@
+@font-face {
+  font-family: dmsans;
+  src: url("dmsans.ttf");
+}
+
+@font-face {
+  font-family: winkle;
+  src: url("Winkle-Regular.ttf");
+}
+
+body {
+  background-color: #eef7ef;
+  font-family: "dmsans", sans-serif;
+}
+
+.transfer_card{
+    height: 500px;
+    width: 450px;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 1px;
+}
+
+.transfer_div{
+    height: 30px;
+    width: 400px;
+    background-color: #d2c4e2;
+    margin: auto;
+    text-align: center;
+    vertical-align: auto;
+    line-height: 30px;
+    color: white;
+    font-weight: 900;
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+.arrow_img{
+  height: 20px;
+}
+
+.scan_table{
+  margin: auto;
+}
+
+.sender_div{
+  height: 150px;
+  width: 150px;
+  background-color: #f7cab7;
+  border-radius: 10px;
+}
+
+.receiver_div{
+  height: 150px;
+  width: 150px;
+  background-color: #ceedce;
+  border-radius: 10px;
+}
+
