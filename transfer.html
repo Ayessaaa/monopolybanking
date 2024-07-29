@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="transfer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monopoly Banking</title>
+  </head>
+  <body>
+
+    <img src="monopolybanking2.png" class="title_img">
+
+    <div class="body_div">
+        <div class="transfer_card">
+            <div class="">
+              <table class="transfer_div">
+                <tr>
+                  <td class="td1"><p>TRANSFER</p></td>
+                  <td><img src="reverse.png" class="arrow_img" /></td>
+                </tr>
+              </table>
+            </div>
+      
+            <table class="scan_table">
+              <tr>
+                <td><p class="sender_text">SENDER</p></td>
+                <td><p class="receiver_text">RECEIVER</p></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="sender_div">
+                    <img src="sender.png" alt="">
+                    <p class="scan_text">Tap to Scan Card</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="receiver_div">
+                    <img src="receiver.png" alt="">
+                    <p class="scan_text">Tap to Scan Card</p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+      
+            <table class="input_table">
+              <tr>
+                <td>
+                  <input id="input_amount" type="number" />
+                </td>
+                <td>
+                  <input id="submit_amount" type="submit" />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="balance_card">
+            <div class="balance_div">
+              <p class="balance_text">BALANCE</p>
+            </div>
+      
+            <p class="balancecard_text">PLAYERS CARD</p>
+            <img src="balancecard.png" class="balancecard_scan">
+            <p class="scanbalance_text">Tap to Scan Card</p>
+            <p class="balanceamount_text">Balance: 120000</p>
+          </div>
+
+          <div class="time_div">
+            <p class="time">00 : 00 : 00</p>
+          </div>
+
+          <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Type</th>
+                    <th>Sender</th>
+                    <th>Receiver</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>00 : 01 : 21</td>
+                    <td>Bank Transfer</td>
+                    <td>Player 1</td>
+                    <td></td>
+                    <td>5000</td>
+                </tr>
+                <tr >
+                    <td>00 : 02 : 37</td>
+                    <td>Bank Transfer</td>
+                    <td>Player 2</td>
+                    <td></td>
+                    <td>5500</td>
+                </tr>
+                <tr>
+                  <td>00 : 01 : 21</td>
+                  <td>Bank Transfer</td>
+                  <td>Player 1</td>
+                  <td></td>
+                  <td>5000</td>
+              </tr>
+              <tr >
+                  <td>00 : 02 : 37</td>
+                  <td>Bank Transfer</td>
+                  <td>Player 2</td>
+                  <td></td>
+                  <td>5500</td>
+              </tr>
+              <tr>
+                <td>00 : 01 : 21</td>
+                <td>Bank Transfer</td>
+                <td>Player 1</td>
+                <td></td>
+                <td>5000</td>
+            </tr>
+            <tr >
+                <td>00 : 02 : 37</td>
+                <td>Bank Transfer</td>
+                <td>Player 2</td>
+                <td></td>
+                <td>5500</td>
+            </tr>
+            <tr>
+              <td>00 : 01 : 21</td>
+              <td>Bank Transfer</td>
+              <td>Player 1</td>
+              <td></td>
+              <td>5000</td>
+          </tr>
+          <tr >
+              <td>00 : 02 : 37</td>
+              <td>Bank Transfer</td>
+              <td>Player 2</td>
+              <td></td>
+              <td>5500</td>
+          </tr>
+          <tr>
+            <td>00 : 01 : 21</td>
+            <td>Bank Transfer</td>
+            <td>Player 1</td>
+            <td></td>
+            <td>5000</td>
+        </tr>
+        <tr >
+            <td>00 : 02 : 37</td>
+            <td>Bank Transfer</td>
+            <td>Player 2</td>
+            <td></td>
+            <td>5500</td>
+        </tr>
+        <tr>
+          <td>00 : 01 : 21</td>
+          <td>Bank Transfer</td>
+          <td>Player 1</td>
+          <td></td>
+          <td>5000</td>
+      </tr>
+      <tr >
+          <td>00 : 02 : 37</td>
+          <td>Bank Transfer</td>
+          <td>Player 2</td>
+          <td></td>
+          <td>5500</td>
+      </tr>
+      <tr>
+        <td>00 : 01 : 21</td>
+        <td>Bank Transfer</td>
+        <td>Player 1</td>
+        <td></td>
+        <td>5000</td>
+    </tr>
+    <tr >
+        <td>00 : 02 : 37</td>
+        <td>Bank Transfer</td>
+        <td>Player 2</td>
+        <td></td>
+        <td>5500</td>
+    </tr>
+    <tr>
+      <td>00 : 01 : 21</td>
+      <td>Bank Transfer</td>
+      <td>Player 1</td>
+      <td></td>
+      <td>5000</td>
+  </tr>
+                <!-- and so on... -->
+            </tbody>
+        </table>    
+
+        <div class="button_page" id="left_button"><img class="arrow" src="left_arrow.png" alt=""></div>
+        <div class="button_page" id="right_button"><img class="arrow" src="right_arrow.png" alt=""></div>
+    </div>
+
+    
+  </body>
+</html>

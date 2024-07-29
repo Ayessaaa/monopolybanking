@@ -14,11 +14,12 @@ body {
 }
 
 .transfer_card{
-    height: 500px;
+    height: 430px;
     width: 450px;
     background-color: white;
     border-radius: 20px;
     padding-top: 1px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .transfer_div{
@@ -39,21 +40,156 @@ body {
   height: 20px;
 }
 
+.td1{
+  width: 320px;
+}
+
 .scan_table{
   margin: auto;
+  margin-top: 10px;
 }
 
 .sender_div{
-  height: 150px;
-  width: 150px;
-  background-color: #f7cab7;
   border-radius: 10px;
+  margin: 5px;
+  font-weight: 700;
+  color: white;
+  align-content: center;
+  font-size: 17px;
 }
 
 .receiver_div{
-  height: 150px;
-  width: 150px;
-  background-color: #ceedce;
   border-radius: 10px;
+  margin: 5px;
+  font-weight: 700;
+  color: white;
+  align-content: center;
+  font-size: 17px;
 }
 
+.playercard_div{
+  margin: auto;
+  height: 110px;
+  width: 370px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: white;
+  align-content: center;
+  font-size: 17px;
+}
+
+
+.playercard_text{
+  font-weight: 900;
+  color: #89bed1;
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.sender_text{
+  font-weight: 900;
+  color: #eba587;
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.receiver_text{
+  font-weight: 900;
+  color: #99d799;
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.scan_text{
+  margin-top: -90px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.scan_text_playerscard{
+  margin-top: -70px;
+  text-align: center;
+  font-size: 15px;
+}
+
+#input_amount{
+  border: none;
+  box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+  border-radius: 8px;
+  height: 40px;
+  width: 270px;
+  padding-left: 20px;
+  font-family: dmsans;
+  font-size: 18px;
+}
+
+.input_table{
+  width: 400px;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.input_table2{
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#submit_amount{
+  height: 40px;
+  width: 80px;
+  font-weight: 600;
+  color: white;
+  background-color: #a5c5a8;
+  border: none;
+  font-family: dmsans;
+  border-radius: 8px;
+  box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+  cursor: pointer;
+}
+
+.bank_card{
+  height: 430px;
+  width: 450px;
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 1px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.bank_div{
+  height: 30px;
+  width: 400px;
+  background-color: #f7cab7;
+  margin: auto;
+  text-align: center;
+  vertical-align: auto;
+  line-height: 30px;
+  color: white;
+  font-weight: 900;
+  font-size: 23px;
+  margin-top: 20px;
+}
+
+.passgo_button{
+  width: 370px;
+  margin: auto;
+  background-color: #b7dcb7;
+  border-radius: 8px;
+  height: 40px;
+  margin-top: 30px;
+  text-align: center;
+  align-content: center;
+  font-weight: 800;
+  color: white;
+  box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+  cursor: pointer;
+}
+
+.passgo_button:hover{
+  background-color: #afd3b3;
+}

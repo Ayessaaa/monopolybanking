@@ -11,27 +11,73 @@
       <div class="">
         <table class="transfer_div">
           <tr>
-            <td><p>TRANSFER</p></td>
-            <td><img src="reverse.png" class="arrow_img"></td>
+            <td class="td1"><p>TRANSFER</p></td>
+            <td><img src="reverse.png" class="arrow_img" /></td>
           </tr>
         </table>
       </div>
 
       <table class="scan_table">
         <tr>
+          <td><p class="sender_text">SENDER</p></td>
+          <td><p class="receiver_text">RECEIVER</p></td>
+        </tr>
+        <tr>
           <td>
             <div class="sender_div">
-
+              <img src="sender.png" alt="">
+              <p class="scan_text">Tap to Scan Card</p>
             </div>
           </td>
           <td>
             <div class="receiver_div">
-              
+              <img src="receiver.png" alt="">
+              <p class="scan_text">Tap to Scan Card</p>
             </div>
           </td>
         </tr>
       </table>
-      
+
+      <table class="input_table">
+        <tr>
+          <td>
+            <input id="input_amount" type="number" />
+          </td>
+          <td>
+            <input id="submit_amount" type="submit" />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="bank_card">
+      <div class="">
+        <table class="bank_div">
+          <tr>
+            <td class="td1"><p>BANK TRANSACTION</p></td>
+            <td><img src="reverse.png" class="arrow_img" /></td>
+          </tr>
+        </table>
+      </div>
+      <p class="playercard_text">PLAYERS CARD</p>
+
+      <div class="playercard_div">
+        <img src="playerscard.png" class="playerscard_img" alt="">
+        <p class="scan_text_playerscard">Tap to Scan Card</p>
+      </div>
+
+      <div class="passgo_button">PASS GO</div>
+
+      <table class="input_table2">
+        <tr>
+          <td>
+            <input id="input_amount" type="number" />
+          </td>
+          <td>
+            <input id="submit_amount" type="submit" />
+          </td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
