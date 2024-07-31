@@ -27,7 +27,7 @@ body {
 .transfer_div {
   height: 30px;
   width: 400px;
-  background-color: #d2c4e2;
+  background-color: #a5c5a8;
   margin: auto;
   text-align: center;
   vertical-align: auto;
@@ -52,7 +52,7 @@ body {
 .balance_div {
   height: 80px;
   width: 400px;
-  background-color: #bad8e3;
+  background-color: #a5c5a8;
   margin: auto;
   text-align: center;
   vertical-align: auto;
@@ -107,7 +107,7 @@ body {
 
 .sender_text {
   font-weight: 900;
-  color: #eba587;
+  color: #8f8f8f;
   text-align: center;
   margin: 0;
   margin-top: 20px;
@@ -115,7 +115,7 @@ body {
 
 .receiver_text {
   font-weight: 900;
-  color: #99d799;
+  color: #8f8f8f;
   text-align: center;
   margin: 0;
   margin-top: 20px;
@@ -125,11 +125,12 @@ body {
   margin-top: -90px;
   text-align: center;
   font-size: 15px;
+  color: #b4b4b4;
 }
 
 .scanbalance_text {
   font-weight: 700;
-  color: white;
+  color: #b4b4b4;
   margin-top: -80px;
   text-align: center;
   font-size: 17px;
@@ -141,7 +142,7 @@ body {
   border-radius: 8px;
   height: 40px;
   width: 270px;
-  padding-left: 20px;
+  padding: 0 15px;
   font-family: dmsans;
   font-size: 18px;
 }
@@ -195,7 +196,7 @@ body {
 
 .balancecard_text {
   font-weight: 900;
-  color: #bfa8db;
+  color: #8f8f8f;
   text-align: center;
   margin: 0;
   margin-top: 20px;
@@ -248,7 +249,7 @@ body {
     position: absolute;
     background-color: #a5c5a8;
     height: fit-content;
-    width: fit-content;
+    width: 130px;
     padding: 0px 30px;
     margin: -850px 550px;
     border-radius: 20px;
@@ -272,7 +273,7 @@ body {
   font-family: dmsans;
   font-weight: 900;
   height: 50px;
-  width: 80px;
+  width: 75px;
   font-size: 30px;
 }
 
@@ -297,4 +298,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+#sender_scan, #receiver_scan, #sender_text, #receiver_text, #balancecard_scan, #balancecard_text{
+  cursor: pointer;
 }

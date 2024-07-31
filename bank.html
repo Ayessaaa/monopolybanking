@@ -1,55 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="transfer.js"></script>
+    <script src="bank.js"></script>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="transfer.css" />
+    <link rel="stylesheet" href="bank.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monopoly Banking</title>
   </head>
   <body>
 
     <script>
-      function bankpage() {
-        window.location.href = "bank.html";
+      function transferpage() {
+        window.location.href = "transfer.html";
     }
     </script>
 
     <img src="monopolybanking2.png" class="title_img">
 
     <div class="body_div">
-        <div class="transfer_card">
+        <div class="bank_card">
             <div class="">
-              <table class="transfer_div">
+              <table class="bank_div">
                 <tr>
-                  <td class="td1"><p>TRANSFER</p></td>
-                  <td><img src="reverse.png" class="arrow_img" onclick="bankpage()" /></td>
+                  <td class="td1"><p>BANK TRANSACTION</p></td>
+                  <td><img src="reverse.png" class="arrow_img" onclick="transferpage()"/></td>
                 </tr>
               </table>
             </div>
+            <p class="playercard_text">PLAYERS CARD</p>
       
-            <table class="scan_table">
-              <tr>
-                <td><p class="sender_text">SENDER</p></td>
-                <td><p class="receiver_text">RECEIVER</p></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="sender_div">
-                    <img src="" alt="" id="sender_scan">
-                    <p class="scan_text" id="sender_text">Tap to Scan Card</p>
-                  </div>
-                </td>
-                <td>
-                  <div class="receiver_div">
-                    <img src="" alt="" id="receiver_scan">
-                    <p class="scan_text" id="receiver_text">Tap to Scan Card</p>
-                  </div>
-                </td>
-              </tr>
-            </table>
+            <div class="playercard_div">
+              <img src="" class="playerscard_scan" id="playerscard_scan" alt="">
+              <p class="playerscard_text" id="playerscard_text">Tap to Scan Card</p>
+            </div>
       
-            <table class="input_table">
+            <div class="passgo_button">PASS GO</div>
+      
+            <table class="input_table2">
               <tr>
                 <td>
                   <input id="input_amount" type="number" />
