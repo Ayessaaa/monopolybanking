@@ -27,9 +27,9 @@ window.onload = function () {
             if (index > -1) { // only splice array when item is found
                 array.splice(index, 1); // 2nd parameter means remove one item only
             }
-            // document.getElementById("card"+cardClicked).src=cardClicked+"b.png";
+            document.getElementById(cardClicked).src="playerscard1.png";
             document.getElementById(cardClicked.split("_")[0]+"_text").innerText = "Card Registered";
-            // console.log(cardClicked.split("_")[0]+"_text")
+            document.getElementById(cardClicked.split("_")[0]+"_text").style.color = "white";
         }
     } );
 
@@ -55,7 +55,7 @@ window.onload = function () {
             document.getElementById(element).src=element+".png";
             document.getElementById(element.split("_")[0]+"_text").innerText = "Tap to Scan Card";
         });
-        document.getElementById("playerscard_scan").src="transfer_gray_scanning.png";
+        document.getElementById("playerscard_scan").src="playerscard_gray_scanning.png";
         document.getElementById("playerscard_text").innerText = "Scanning . . .";
         cardClicked = "playerscard_scan";
 

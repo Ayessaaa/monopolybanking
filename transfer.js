@@ -27,7 +27,8 @@ window.onload = function () {
             if (index > -1) { // only splice array when item is found
                 array.splice(index, 1); // 2nd parameter means remove one item only
             }
-            document.getElementById(cardClicked).src="transfer100312613264.png";
+            
+            document.getElementById(cardClicked).src="playerscard10.png";
             document.getElementById(cardClicked.split("_")[0]+"_text").innerText = "Card Registered";
             document.getElementById(cardClicked.split("_")[0]+"_text").style.color = "white";
             // console.log(cardClicked.split("_")[0]+"_text")
