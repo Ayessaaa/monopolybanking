@@ -8,6 +8,50 @@
     <title>Monopoly Banking</title>
   </head>
   <body>
+    <script>
+      var btn = document.getElementById("submit_btn");
+  
+      // define the callAPI function that takes a first name and last name as parameters
+      var callAPI = (name, username) => {
+  
+        event.preventDefault()
+        // instantiate a headers object
+        var myHeaders = new Headers();
+        // add content type header to object
+        myHeaders.append("Content-Type", "application/json");
+        // using built in JSON utility package turn object to string and store in a variable
+        var raw = JSON.stringify({ text: text });
+        // create a JSON object with parameters for API call and store in a variable
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+        // make API call with parameters and use promises to get response
+        fetch(
+          "https://ye14rmozb3.execute-api.ap-southeast-1.amazonaws.com/dev",
+          requestOptions
+        )
+          .then((response) => response.text())
+          .catch((error) => console.log("error", error));
+      };
+  
+      btn.addEventListener("click", function () {
+        callAPI(
+          "textt"
+        );
+        console.log("called");
+  
+        function submitForm(form) {
+          const submitFormFunction = Object.getPrototypeOf(form).submit;
+          submitFormFunction.call(form);
+  
+          submitForm(document.getElementById("form"));
+        }
+      });
+    </script>
+
     <img src="players3.png" class="players" />
     <table class="table">
       <tr>
@@ -23,6 +67,7 @@
             </div>
             <div class="scan_div">
               <img src="" id="card1"/>
+
               <p class="scan_text" id="text1">Tap to Scan Card</p>
             </div>
           </div>
