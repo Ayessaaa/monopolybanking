@@ -207,7 +207,10 @@
       const options = {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json' // Set content type to JSON
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*', // or specify a domain
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'// Set content type to JSON
         },
         body: JSON.stringify(jsonData) // Convert JSON data to a string and set it as the request body
       };
