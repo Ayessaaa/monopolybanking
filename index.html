@@ -192,11 +192,50 @@
       }
     </script>
 
-    <div class="start_div" id="submit_btn" onclick="nextpage()">
+    <div class="start_div" id="submit_btn" onclick="">
       <p>START GAME</p>
     </div>
 
     <input id="rfid_input" type="number" />
+
+    <script>
+      var btn = document.getElementById("submit_btn");
+
+    function callAPI() {
+      // Your JSON data
+      const jsonData = { player_number: '2', player_rfid: '11111' };
+
+      // Set up options for the fetch request
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json' // Set content type to JSON
+        },
+        body: JSON.stringify(jsonData) // Convert JSON data to a string and set it as the request body
+      };
+
+      // Make the fetch request with the provided options
+      fetch('https://303o2i3if5.execute-api.ap-southeast-1.amazonaws.com/v1/scan-player', options)
+        .then(response => {
+          // Check if the request was successful
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          // Parse the response as JSON
+          return response.json();
+        })
+        .then(data => {
+          // Handle the JSON data
+          console.log(data);
+        })
+        .catch(error => {
+          // Handle any errors that occurred during the fetch
+          console.error('Fetch error:', error);
+        });
+      }
+
+      btn.addEventListener("click", callAPI())
+    </script>
 
     
   </body>
