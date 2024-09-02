@@ -200,8 +200,6 @@
 
     <script>
       var btn = document.getElementById("submit_btn");
-
-    function callAPI() {
       // Your JSON data
       const jsonData = { player_number: '2', player_rfid: '11111' };
 
@@ -232,9 +230,7 @@
           // Handle any errors that occurred during the fetch
           console.error('Fetch error:', error);
         });
-      }
-
-      btn.addEventListener("click", callAPI())
+    
     </script>
 
     
