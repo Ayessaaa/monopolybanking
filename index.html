@@ -16,8 +16,7 @@
             <div class="name_div" id="pd1">
               <table class="player_name_table">
                 <tr>
-                  <td><p class="name">Players Name</p></td>
-                  <td><img src="pen-solid.png" class="edit_icon" /></td>
+                  <td><textarea placeholder="Player 1" class="name"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -33,8 +32,7 @@
             <div class="name_div" id="pd2">
               <table class="player_name_table">
                 <tr>
-                  <td><p class="name">Players Name</p></td>
-                  <td><img src="pen-solid.png" class="edit_icon" /></td>
+                  <td><textarea placeholder="Player 2" class="name"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -50,8 +48,7 @@
             <div class="name_div" id="pd3">
               <table class="player_name_table">
                 <tr>
-                  <td><p class="name">Players Name</p></td>
-                  <td><img src="pen-solid.png" class="edit_icon" /></td>
+                  <td><textarea placeholder="Player 3" class="name"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -67,8 +64,7 @@
             <div class="name_div" id="pd4">
               <table class="player_name_table">
                 <tr>
-                  <td><p class="name">Players Name</p></td>
-                  <td><img src="pen-solid.png" class="edit_icon" /></td>
+                  <td><textarea placeholder="Player 4" class="name"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -84,8 +80,7 @@
             <div class="name_div" id="pd5">
               <table class="player_name_table">
                 <tr>
-                  <td><p class="name">Players Name</p></td>
-                  <td><img src="pen-solid.png" class="edit_icon" /></td>
+                  <td><textarea placeholder="Player 5" class="name"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -103,8 +98,7 @@
             <div class="name_div" id="pd6">
               <table class="player_name_table">
                 <tr>
-                  <td><p class="name">Players Name</p></td>
-                  <td><img src="pen-solid.png" class="edit_icon" /></td>
+                  <td><textarea placeholder="Player 6" class="name"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -120,8 +114,7 @@
             <div class="name_div" id="pd7">
               <table class="player_name_table">
                 <tr>
-                  <td><p class="name">Players Name</p></td>
-                  <td><img src="pen-solid.png" class="edit_icon" /></td>
+                  <td><textarea placeholder="Player 7" class="name"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -137,8 +130,7 @@
             <div class="name_div" id="pd8">
               <table class="player_name_table">
                 <tr>
-                  <td><p class="name">Players Name</p></td>
-                  <td><img src="pen-solid.png" class="edit_icon" /></td>
+                  <td><textarea placeholder="Player 8" class="name"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -154,8 +146,7 @@
             <div class="name_div" id="pd9">
               <table class="player_name_table">
                 <tr>
-                  <td><p class="name">Players Name</p></td>
-                  <td><img src="pen-solid.png" class="edit_icon" /></td>
+                  <td><textarea placeholder="Player 9" class="name"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -171,8 +162,7 @@
             <div class="name_div" id="pd10">
               <table class="player_name_table">
                 <tr>
-                  <td><p class="name">Players Name</p></td>
-                  <td><img src="pen-solid.png" class="edit_icon" /></td>
+                  <td><textarea placeholder="Player 10" class="name"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -199,43 +189,47 @@
     <input id="rfid_input" type="number" />
 
     <script>
-      var btn = document.getElementById("submit_btn");
-      // Your JSON data
-      const jsonData = { player_number: '2', player_rfid: '11111' };
+      fetch(
+        "https://303o2i3if5.execute-api.ap-southeast-1.amazonaws.com/v1/reset-players",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({}),
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((error) => console.error("Error:", error));
 
-      // Set up options for the fetch request
-      const options = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*', // or specify a domain
-            'Access-Control-Allow-Headers': 'Content-Type',
-            'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'// Set content type to JSON
-        },
-        body: JSON.stringify(jsonData) // Convert JSON data to a string and set it as the request body
+      // define the callAPI function that takes a first name and last name as parameters
+      var callAPI = (pnumber, prfid) => {
+        event.preventDefault();
+        // instantiate a headers object
+        var myHeaders = new Headers();
+        // add content type header to object
+        myHeaders.append("Content-Type", "application/json");
+        // using built in JSON utility package turn object to string and store in a variable
+        var raw = JSON.stringify({
+          player_number: pnumber,
+          player_rfid: prfid,
+        });
+        // create a JSON object with parameters for API call and store in a variable
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+        // make API call with parameters and use promises to get response
+        fetch(
+          "https://303o2i3if5.execute-api.ap-southeast-1.amazonaws.com/v1/scan-player",
+          requestOptions
+        )
+          .then((response) => response.text())
+          .catch((error) => console.log("error", error));
       };
-
-      // Make the fetch request with the provided options
-      fetch('https://303o2i3if5.execute-api.ap-southeast-1.amazonaws.com/v1/scan-player', options)
-        .then(response => {
-          // Check if the request was successful
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          // Parse the response as JSON
-          return response.json();
-        })
-        .then(data => {
-          // Handle the JSON data
-          console.log(data);
-        })
-        .catch(error => {
-          // Handle any errors that occurred during the fetch
-          console.error('Fetch error:', error);
-        }); 
-    
     </script>
-
-    
   </body>
 </html>
