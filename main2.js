@@ -40,7 +40,7 @@ window.onload = function () {
       document.getElementById("text" + cardClicked).innerText =
         "Card Registered";
 
-      callAPI(String(cardClicked), String(rfidNumber));
+      callAPI(String(cardClicked), String(rfidNumber), document.getElementById("name"+String(cardClicked)).value);
       console.log("called");
     }
   }

@@ -16,7 +16,7 @@
             <div class="name_div" id="pd1">
               <table class="player_name_table">
                 <tr>
-                  <td><textarea placeholder="Player 1" class="name"></textarea></td>
+                  <td><textarea maxlength="15" placeholder="Player 1" class="name" id="name1"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -32,7 +32,7 @@
             <div class="name_div" id="pd2">
               <table class="player_name_table">
                 <tr>
-                  <td><textarea placeholder="Player 2" class="name"></textarea></td>
+                  <td><textarea maxlength="15" placeholder="Player 2" class="name" id="name2"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -48,7 +48,7 @@
             <div class="name_div" id="pd3">
               <table class="player_name_table">
                 <tr>
-                  <td><textarea placeholder="Player 3" class="name"></textarea></td>
+                  <td><textarea maxlength="15" placeholder="Player 3" class="name" id="name3"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -64,7 +64,7 @@
             <div class="name_div" id="pd4">
               <table class="player_name_table">
                 <tr>
-                  <td><textarea placeholder="Player 4" class="name"></textarea></td>
+                  <td><textarea maxlength="15" placeholder="Player 4" class="name" id="name4"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -80,7 +80,7 @@
             <div class="name_div" id="pd5">
               <table class="player_name_table">
                 <tr>
-                  <td><textarea placeholder="Player 5" class="name"></textarea></td>
+                  <td><textarea maxlength="15" placeholder="Player 5" class="name" id="name5"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -98,7 +98,7 @@
             <div class="name_div" id="pd6">
               <table class="player_name_table">
                 <tr>
-                  <td><textarea placeholder="Player 6" class="name"></textarea></td>
+                  <td><textarea maxlength="15" placeholder="Player 6" class="name" id="name6"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -114,7 +114,7 @@
             <div class="name_div" id="pd7">
               <table class="player_name_table">
                 <tr>
-                  <td><textarea placeholder="Player 7" class="name"></textarea></td>
+                  <td><textarea maxlength="15" placeholder="Player 7" class="name" id="name7"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -130,7 +130,7 @@
             <div class="name_div" id="pd8">
               <table class="player_name_table">
                 <tr>
-                  <td><textarea placeholder="Player 8" class="name"></textarea></td>
+                  <td><textarea maxlength="15" placeholder="Player 8" class="name" id="name8"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -146,7 +146,7 @@
             <div class="name_div" id="pd9">
               <table class="player_name_table">
                 <tr>
-                  <td><textarea placeholder="Player 9" class="name"></textarea></td>
+                  <td><textarea maxlength="15" placeholder="Player 9" class="name" id="name9"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -162,7 +162,7 @@
             <div class="name_div" id="pd10">
               <table class="player_name_table">
                 <tr>
-                  <td><textarea placeholder="Player 10" class="name"></textarea></td>
+                  <td><textarea maxlength="15" placeholder="Player 10" class="name" id="name10"></textarea></td>
                 </tr>
               </table>
             </div>
@@ -182,7 +182,7 @@
       }
     </script>
 
-    <div class="start_div" id="submit_btn" onclick="">
+    <div class="start_div" id="submit_btn" onclick="nextpage()">
       <p>START GAME</p>
     </div>
 
@@ -204,7 +204,7 @@
         .catch((error) => console.error("Error:", error));
 
       // define the callAPI function that takes a first name and last name as parameters
-      var callAPI = (pnumber, prfid) => {
+      var callAPI = (pnumber, prfid, pname) => {
         event.preventDefault();
         // instantiate a headers object
         var myHeaders = new Headers();
@@ -214,6 +214,7 @@
         var raw = JSON.stringify({
           player_number: pnumber,
           player_rfid: prfid,
+          player_name: pname
         });
         // create a JSON object with parameters for API call and store in a variable
         var requestOptions = {
